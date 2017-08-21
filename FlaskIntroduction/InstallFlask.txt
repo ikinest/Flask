@@ -1,3 +1,0 @@
-#How to use pip install Flask
-
-#1.pip3 install flask
