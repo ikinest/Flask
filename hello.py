@@ -3,7 +3,10 @@ from flask import Flask # import Flask
 from flask import make_response
 from flask import redirect
 from flask import abort
+from flask_script import Manager
+
 app = Flask(__name__) # init a Flask class by a fix parameter __name__
+manager = Manager(app)
 
 @app.route('/')#homepage view function
 def index():
@@ -26,4 +29,4 @@ def get_user(id):
 	
 
 if __name__ == "__main__":# main function
-	app.run(debug = True)#recall flask default server and open debug model
+	manager.run()
